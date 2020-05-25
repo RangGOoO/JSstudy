@@ -1,0 +1,124 @@
+/*cascading 부모 또는 조상태그의 css를 덮어 씌울 수 있다.*/
+/*클래스는 여러개 넣을 수 있다 "blind gorang babo ++++ " id는 고유 이름 한 태그에 하나만 존재 가능*/
+/*inline-block은 width와 height 적용 가능*/
+/* block format context, stackting context contening block
+
+position :
+모든 태그는 기본적으로 static 값을 가짐
+
+relative - 상대적인것 비교대상이 필요(스태틱인 경우랑 비교) 
+양수이면 안쪽으로 음수면 바깥으로 이동
+만약 static 상태에서 relative로 바꾸고 10 10씩 이동을 주면 static에서 10만큼씩 이동
+부모 태그 일때 자식 태그들도 같이 이동 
+
+absoulute :
+절대적인것 전체 화면을 기준으로 이동
+absolute 지정시 자신을 감싸고 있는 태그의 위치를 기반으로 하기 위해서는 감싸는 태그의 값이 static이여서는 안된다.
+
+fixed : 
+브라우저에 대한 위치를 잡는다. 스크롤에 영향을 받지 않고 고정된 위치를 가짐
+html, css 에서 position과 float z-index 중요
+
+*/
+/*  ----FLEX----
+FLEX는 기본적으로 틀과 틀에 들어갈 아이템으로 구성되어야 한다 
+틀의 속성은 display: flex가 들어가야 한다 -> 플럭스의 기본
+플럭스의 속성은 굉장히 많다 
+플러스의 기본 속성은 row 
+row는 행 column은 열 
+container 부여 속성 : 
+flex-direction: row-reverse -> 반대로 정렬 
+flex-direction: colomn -> 수직 정렬
+flex-direction: colomn-reverse -> 정렬 순서 반대로 수직 정렬
+flex-grow : 기본 값으로는 0 1을 주면 틀의 전체를 아이템들이 각각 1/n만큼 차지 
+flex-basis : 아이템이 가질 공간을 지정 
+flex-shirnk : grow의 반대 basis를 지정해야 하며 basis값 이하로는 떨어지지 않는다.
+flex : gorw shring basis 순으로 코딩
+*/
+
+
+* {
+    box-sizing: border-box;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+}
+div#header-center{
+    margin: 0 auto; /* top bottom = 0px left, right는 여백을 맞춘다 */
+    width: 1080px;
+}
+#header-search h1{
+    margin: 0px;
+    width: 280px;
+    height: 115px;
+    display: inline-block; /* */
+    background-image: url(mobile_144744402167.png);
+    background-position: -70px -15px;
+    text-decoration: none;
+    vertical-align: middle;
+    background-repeat: no-repeat; 
+}
+/* 
+자손 선택자 보통 자손선택자를 많이 쓴다
+#header-center h1{
+
+}
+*/
+#header-search a{
+    text-decoration: none;
+}
+#header-search > a span{
+    display: none;
+}
+.blind{
+    position: absolute;
+    clip: rect(0 0 0 0);
+    margin: 0px auto;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    
+}
+#header-search fieldset{
+    width: 586x;
+    height: 56px;
+    margin-left: 10px;
+    padding: 10px 0px 10px 5px; 
+    border: 2px solid #03cf5d;
+    position: relative;
+}
+#header-search h2 {
+    display: none;
+}
+#header-search fieldset{
+    width: 520px;
+    display: inline-block;
+    vertical-align: middle;
+}
+#header-search fieldset input{
+    border: none;
+    padding: 0px;
+    outline: none;
+    width: 400px;
+    height: 32px;
+    vertical-align: top;
+}
+#header-search fieldset button{
+    width: 56px;
+    height: 56px;
+    border: none;
+    margin: 0px;
+    background-color: #03cf5d;
+    position: absolute;
+    right: 0;
+    top: -2px;
+}
+#search-image {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-image: url(sp_main.9efbb5.png);
+    background-repeat: no-repeat;
+    background-position: -758px -240px;
+}

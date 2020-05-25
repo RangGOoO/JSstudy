@@ -8,7 +8,7 @@ const TodoForm = document.querySelector(".toDoform"),
 
 const Todos = "Todos"; //localStorage의 키 값 이름 
 
-const TodoAry = []; //Todo 값을 저장하기 위한 배열
+let TodoAry = []; //Todo 값을 저장하기 위한 배열
 
 
 //할 일을 TodoAry에 저장 후 localstorage에 저장하기 위한 함수
@@ -18,13 +18,25 @@ function saveTodo(){
     //배열 안의 값이 아닌 형태로 저장되기 때문에(예를 들어 12같은 값이 아닌 object 이런식)
     //형태를 string으로 변환시켜 데이터로 저장
 }
-
+function delTodo(event){
+    const btn = event.target; //현재 버튼이 눌린 대상을 불러옴
+    const parentli = btn.parentNode;//대상의 부모를 데려온다.
+    TodoList.removeChild(parentli);//대상 부모의 부모에게서 removechild 메소드를 통해 버튼이 눌린 대상의 부모를 삭제
+    const cleanTodo = TodoAry.filter(function(Todo){
+        return (Todo.id !== parseInt(parentli.id));
+    })
+    TodoAry = cleanTodo;
+    console.log(cleanTodo, TodoAry);
+    console.log(parentli);
+    saveTodo();
+}
 
 function paintTodo(ToDoValue){
     const li = document.createElement("li"); //li생성
     const span = document.createElement("span"); //span태그 생성
     const delbtn = document.createElement("button");//삭제버튼 생성
     delbtn.innerText = "✖"; //삭제 버튼의 값 
+    delbtn.addEventListener("click", delTodo);
     li.appendChild(span); //span태그를 li태그 안에 삽입
     li.appendChild(delbtn); //span태그 삽입 후 삭제버튼 태그 삽입
     span.innerText = ToDoValue; //span태그 안에 입력창 안의 값 대입
@@ -49,9 +61,17 @@ function loadTodo(){
     const getTodo = localStorage.getItem(Todos);
     //localstorage의 todos키의 값들을 불러오기 위한 상수 
     if(getTodo !== null){
-        //Todo의 값이 널이 아니라면 전에 적어놓은 할 일을 화면에 표시하기 위한 부분
+        const parsegetTodo = JSON.parse(getTodo);
+        parsegetTodo.forEach(function(todoValue){
+            paintTodo(todoValue.Todo);
+        })
+        //parsegetTodo는 배열이며 배열에서 제공하는 forEach메소드를 통해 parsegetTodo배열 내의
+        //모든 요소들에 대하여 function적용 function의 내용은 배열 안의 객체안의 Todo값을 불러오는것
+        //불러온 후 paintTodo함수를 통해 리스트로 표시 
     }
+     //Todo의 값이 널이 아니라면 전에 적어놓은 할 일을 화면에 표시하기 위한 부분
 }
+
 
 function init(){
     loadTodo(); //전에 있던 todo값을 불러오기 위한 함수
