@@ -22,12 +22,15 @@ function delTodo(event){
     const btn = event.target; //현재 버튼이 눌린 대상을 불러옴
     const parentli = btn.parentNode;//대상의 부모를 데려온다.
     TodoList.removeChild(parentli);//대상 부모의 부모에게서 removechild 메소드를 통해 버튼이 눌린 대상의 부모를 삭제
-    const cleanTodo = TodoAry.filter(function(Todo){
-        return (Todo.id !== parseInt(parentli.id));
-    })
+    const cleanTodo = TodoAry.filter(function(currentid){
+        return currentid.id !== (parseInt(parentli.id));
+    });
+    //TodoAry배열의 모든 요소들에게 filter메소드 안의 함수를 실행 
+    //currentid = 현재 함수가 실행되고 있는 배열의 요소를 받는다 
+    //filter는 true, false만 반환 하며 currentid.id는 현재 요소의 아이디를 의미
+    //parseInt(parentli.id)는 delbtn이 눌린 항목의 부모 태그 즉 li태그의 id 값을 가져온다 
+    //삭제되는 li의 id와 currentid의 값이 다르면 true를 반환하며 cleanTodo에는 삭제 li를 뺀 항목들만 존대
     TodoAry = cleanTodo;
-    console.log(cleanTodo, TodoAry);
-    console.log(parentli);
     saveTodo();
 }
 
@@ -36,7 +39,7 @@ function paintTodo(ToDoValue){
     const span = document.createElement("span"); //span태그 생성
     const delbtn = document.createElement("button");//삭제버튼 생성
     delbtn.innerText = "✖"; //삭제 버튼의 값 
-    delbtn.addEventListener("click", delTodo);
+    delbtn.addEventListener("click", delTodo); //삭제버튼을 누르면 발생하는 클릭 이벤트 부여
     li.appendChild(span); //span태그를 li태그 안에 삽입
     li.appendChild(delbtn); //span태그 삽입 후 삭제버튼 태그 삽입
     span.innerText = ToDoValue; //span태그 안에 입력창 안의 값 대입
@@ -45,6 +48,7 @@ function paintTodo(ToDoValue){
         Todo : ToDoValue,
         id : TodoAry.length + 1,
     }; //할일을 객체를 만들어 해야될 일의 이름과 id부여
+    li.id = AryObj.id;
     TodoAry.push(AryObj); //객체를 todoAry배열안에 집어넣기
     saveTodo(); //localstorage안에 todoAry 값 저장 하기 위한 함수 
 }
