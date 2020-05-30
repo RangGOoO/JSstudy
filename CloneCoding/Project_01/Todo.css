@@ -1,25 +1,46 @@
+* {
+    color: white;
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 25px;
+}
+/* @font-face { 
+    font-family: 'Cafe24Oneprettynight'; 
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff') format('woff'); 
+    font-weight: normal; 
+    font-style: normal; 
+} */
+
+body{
+    background-color: black;
+}
+
+
 .form, .greeting {
     display: none;
 }
 .showing{
     display: block;
 }
+.toDoform input{
+    color: black;
+}
 
-
-@keyframes fadeIn{
-    form{
+@keyframes fadein { 
+    0% {
         opacity: 0;
     }
-    to{
+    100% {
         opacity: 1;
     }
 }
-.bgimg{
+.backimg{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: -1;
-    animation: fadeIn 0.5s linear;
+    animation-name: fadein;
+    animation-duration: 1s;
+    animation-timing-function: linear;
 }

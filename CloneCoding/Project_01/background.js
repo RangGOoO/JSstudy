@@ -1,11 +1,11 @@
 const body = document.querySelector("body");
-const IMG_MAXNUMBER = 6;
+const IMG_MAXNUMBER = 5;
 
 
 function paintBackground(backgroundNum){
     const image = new Image();
     image.src = `Images/${backgroundNum + 1}.jpg`;
-    image.classList.add("bgimg");
+    image.classList.add("backimg");
     body.prepend(image);
 }
 
