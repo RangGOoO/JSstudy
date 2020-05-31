@@ -1,4 +1,5 @@
-const CORD = 'cord'
+const key = "216efcf7a84a1dc9b181957fae8d8811";
+const CORD = 'cord';
 //사용자가 위치 허용을 하여 위도와 경도를 가져올 수 있을 경우 실행 함수
 function Sucessget(posit){
     const latitude = posit.coords.latitude; 
@@ -28,6 +29,7 @@ function loadcord(){
         //위치정보가 존재한다면
     }
 }
+
 //위치를 읽어오는 함수
 function init(){
     loadcord();

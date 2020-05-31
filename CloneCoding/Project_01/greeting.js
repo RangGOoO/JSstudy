@@ -15,7 +15,6 @@ function handleEvent(event){
     const Uservalue = input.value;
     paintnHello(Uservalue);
     saveName(Uservalue);
-
 }
 //유저의 이름을 묻는 함수 
 function askName(){
