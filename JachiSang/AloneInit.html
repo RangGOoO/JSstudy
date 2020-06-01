@@ -3,28 +3,38 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="Jachi.css" />
+    <link rel="stylesheet" href="fontello-38b7ed85/css/fontello.css">
     <title>자취생들</title>
 </head>
 <body>
     <div class="container">
+        <!-- 제목부분 -->
         <div class="item head">
             <h1>자취생들</h1>
         </div>
+        <!-- 메인 컨텐츠 부분 -->
         <div class="item main">
             <div id="ShowMain">
                 <!-- 이름 입력시 이름 입력칸은 사라진다 -->
                 <form class="Name-input">
                     <input type="text" placeholder="Name"/>
                 </form>
-                <div id="Menu hide"> 
-
+                <!-- 사용자 입력 후 메뉴 생성 -->
+                <div class="Menu" id="Menudiv"> 
+                    <form class="Menu-form">
+                        <i class="icon-folder"></i>
+                        <i class="icon-folder"></i>
+                        <i class="icon-folder"></i>
+                        <i class="icon-folder vibrate"></i>
+                    </form>
                 </div>
+                <!-- ------------------------ -->
             </div>
         </div>
-        <div class="item footer">
-            홈페이지 하단
-        </div>
+        <!-- 하단부분 -->
+
     </div>
+    <script src="vibrate.js"></script>
     <script src="Jachi.js"></script>
 </body>
 </html>

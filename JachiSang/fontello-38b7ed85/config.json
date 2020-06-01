@@ -1,0 +1,124 @@
+{
+  "name": "",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "559647a6f430b3aeadbecd67194451dd",
+      "css": "menu",
+      "code": 61641,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "661bd5ba1dad15ad9acbfcd8b8af76f3",
+      "css": "quote-left",
+      "code": 59392,
+      "src": "iconic"
+    },
+    {
+      "uid": "bc0af4824c8eedcad7bc0d35911dac2a",
+      "css": "quote-right",
+      "code": 59393,
+      "src": "iconic"
+    },
+    {
+      "uid": "2adfda136b09532bd8174b025b67fe87",
+      "css": "moon-inv",
+      "code": 59395,
+      "src": "meteocons"
+    },
+    {
+      "uid": "d577552bb94bdeb53e6517873481aeea",
+      "css": "rain",
+      "code": 59396,
+      "src": "meteocons"
+    },
+    {
+      "uid": "17463471d0f132cee16835507ea51ecf",
+      "css": "cloud",
+      "code": 59397,
+      "src": "meteocons"
+    },
+    {
+      "uid": "b500010a53f4807828ac252725dc6fd1",
+      "css": "hail",
+      "code": 59398,
+      "src": "meteocons"
+    },
+    {
+      "uid": "86ee1fc7ff57e9c9c60d8a5e57183776",
+      "css": "user",
+      "code": 59399,
+      "src": "iconic"
+    },
+    {
+      "uid": "48050e07077b01021f7fbdbbec8f7de7",
+      "css": "sun-inv",
+      "code": 59394,
+      "src": "iconic"
+    },
+    {
+      "uid": "906a8ebb0faf8db0411028a0364bb16d",
+      "css": "temperature",
+      "code": 59400,
+      "src": "meteocons"
+    },
+    {
+      "uid": "f8aa663c489bcbd6e68ec8147dca841e",
+      "css": "folder",
+      "code": 59401,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "25a81737628d1e654a30ad412d7d6dd7",
+      "css": "align-justify",
+      "code": 59402,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "48b87105bd38c20315f1b705b8c7b38c",
+      "css": "list",
+      "code": 59403,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "749e7d90a9182938180f1d2d8c33584e",
+      "css": "right-open",
+      "code": 59404,
+      "src": "entypo"
+    },
+    {
+      "uid": "c311c48d79488965b0fab7f9cd12b6b5",
+      "css": "left-open",
+      "code": 59405,
+      "src": "entypo"
+    },
+    {
+      "uid": "69bd9dfe950d07d910f39c6988364e49",
+      "css": "battery-4",
+      "code": 62016,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "7ab4ec24078133effbc4e923b65ef835",
+      "css": "battery-3",
+      "code": 62017,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "e430a168b45ba40aa988ca1a5034a553",
+      "css": "battery-2",
+      "code": 62018,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "w3nzesrlbezu6f30q7ytyq919p6gdlb6",
+      "css": "home",
+      "code": 59406,
+      "src": "typicons"
+    }
+  ]
+}
