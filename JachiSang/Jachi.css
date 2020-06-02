@@ -59,7 +59,7 @@ body{
     font-size: 30px;
     animation: fadein 2s ease-in-out;
 }
-#Menudiv{
+#Menudiv, ul{
     display: flex;
     position: absolute;
     width: 550px;
@@ -69,10 +69,22 @@ body{
     transform: translate(-50%, -50%);
     animation: fadein 2s ease-in-out;
 }
+ul{
+    height: 30px;
+    transform: translate(-50%, 170%);
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    list-style-type: none;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    width: 150px;
+}
 #Menudiv .Menu-form{
     display: flex;
     flex-direction: row;
-    flex-grow: 1;
 }
 
 #Menudiv .Menu-form .icon-folder{
@@ -81,7 +93,6 @@ body{
     flex-grow: 1;
     padding: 0px 15px;
 }
-
 
 /* 숨겨지는 항목들에 적용할 클래스 */
 #ShowMain .hide{
@@ -110,11 +121,11 @@ body{
         margin-left:2px;
         animation-timing-function: cubic-bezier(0.52, 0.44, 0.47, 0.44);
     }
-    20% {
+    30% {
         margin-left:-2px;
         animation-timing-function: cubic-bezier(0.53, 0.56, 0.48, 0.56);
     }
-    30% {
+    50% {
         margin-left:0px;
         animation-timing-function: cubic-bezier(0.45, 0.84, 0.75, 0.99);
     }
