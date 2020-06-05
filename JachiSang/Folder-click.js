@@ -1,7 +1,6 @@
 const clickMenudiv = document.querySelector('#Menudiv'),
     clickMenuform = clickMenudiv.querySelector('.Menu-form'),
     clickicon = clickMenuform.querySelectorAll('i');
-
     function Givesrc(){
         for(let i = 0; i <= clickicon.length; i++){
             clickicon[i].addEventListener("click", function(){
@@ -24,5 +23,5 @@ const clickMenudiv = document.querySelector('#Menudiv'),
     function init(){
         Givesrc();
     };
-
+    
     init();
