@@ -5,16 +5,16 @@ const clickMenudiv = document.querySelector('#Menudiv'),
         for(let i = 0; i <= clickicon.length; i++){
             clickicon[i].addEventListener("click", function(){
                 if(parseInt(clickicon[i].id) === 1){
-                    location.href = "./H/KoreanFood.html";
+                    location.href = "./H/Easyfast.html";
                 }
                 else if(parseInt(clickicon[i].id) === 2){
-                    location.href = "./H/WestFood.html";
+                    location.href = "./H/Highquality.html";
                 }
                 else if(parseInt(clickicon[i].id) === 3){
-                    location.href = "./H/ChainaFood.html";
+                    location.href = "./H/DrinkFood.html";
                 }
                 else{
-                    location.href = "./H/JapanFood.html";
+                    location.href = "./H/SubFood.html";
                 }
             });
         }

@@ -13,12 +13,16 @@ function autoSlide(){
         Slideul.style.marginLeft = `${currentIndex*-100}%`;
         currentIndex = currentIndex + 1;
     }
-    console.log(currentIndex);
-    console.log(Slideli.length);
+}
+//슬라이드의 이미지 클릭시 해당 레시피 이동 함수
+function MoveUrl(){
+    Slideli.forEach(function(num){
+        if(num)
+        num.addEventListener('click', function(){
+            window.open()
+        })
+    })
 }
 autoSlide();
-// function init(){
-
-// }
 setInterval(autoSlide, 7000);
 
