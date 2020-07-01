@@ -16,10 +16,13 @@ body{
     background-color: rgb(255, 255, 255);
     margin: 0;
 }
+a{
+    text-decoration: none;
+}
+a:link { color: white; }
+a:visited { color: white; }
 /* 화면 전체 container 속성 값 */
 .container{
-    display: flex;
-    flex-direction: row;
     height: 100%;
     opacity: 0.9;
     animation: fadein 0.5s linear;
@@ -28,9 +31,11 @@ body{
 /* ------------head부분----------- */
 .container .head{
     text-align: center;
+    float: left;
     background: linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
     opacity: 0.8;
     width: 20%;
+    height: 100%;
 }
 .container .head h1{
     color: white;
@@ -38,7 +43,6 @@ body{
     margin: 0;
     margin-top: 50px;
     opacity: 1;
-
     height: 10%;
 }
 .container .head .ic-left{
@@ -75,6 +79,7 @@ body{
     font-size: 23px;
     margin-top: 20px;
     text-align: center;
+    cursor: default;
 }
 .Menubar .menuList{
     margin: 0;
@@ -97,15 +102,49 @@ body{
 /* ------초기 화면은 슬라이드의 구성-------  */
 .Maintext{
     width: 80%;
-    background-color: rgba(236, 236, 240, 0.5);
+    height: 100%;
+    position: relative;
+    float: left;
+}
+.SliderBox{
+    width: 100%;
+    height: 100%;
     position: relative;
 }
+.recommend{
+    font-size: 30px;
+    color: gray;
+    border: 1px solid rgb(105, 105, 105);
+    display: inline-block;
+    width: 200px;
+    height: 65px;
+    position: absolute;
+    top: 6%;
+    left: 43%;
+    z-index: 1;
+    text-align: center;
+    padding-top: 15px;
+    background-color: white;
+    border-radius: 5px;
+    letter-spacing: 10px;
+}
+.outline{
+    position: relative;
+    width: 55%;
+    height: 80%;
+    border: 1px solid rgb(104, 104, 104);
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
+}
 .Slider{
-    width: 50%;
-    height: 70%;
+    width: 70%;
+    height: 90%;
     position: relative;
     background-color: white;
-    top: 55%;
+    top: 52%;
     left: 50%;
     transform: translate(-50%, -50%);
     overflow: hidden;
@@ -124,13 +163,13 @@ body{
     position: absolute;
     width: 100%;
     height: 100%;
+    opacity: 0.9;
 }
 .slide-item:nth-child(1){
     margin-left: 0;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 700px 700px;
-    opacity: 0.8;
 }
 .slide-item:nth-child(2){
     margin-left: 100%;
@@ -151,10 +190,22 @@ body{
     background-color: white;
     color: lightslategray;
     font-size: 20px;
+    background-color: rgba(236, 236, 240, 0.5);
 }
+
+.iframeBox{
+    height: 100%;
+    width: 100%;
+}
+
 /* ---------------------------------------- */
 
-
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
 .Menubar .hide{
     display: none;
 }
