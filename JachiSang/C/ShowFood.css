@@ -196,6 +196,7 @@ a:visited { color: white; }
 .iframeBox{
     height: 100%;
     width: 100%;
+    animation: fadein 1s linear;
 }
 
 /* ---------------------------------------- */

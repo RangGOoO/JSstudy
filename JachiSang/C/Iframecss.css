@@ -13,11 +13,13 @@
 html{  
     height: 100%;
     width: 100%;
+    
 }
 body{
     height: 100%;
     width: 100%;
     margin: 0;
+    animation: fadein 0.8s linear;
 }
 .containBox{
     width: 100%;
@@ -58,4 +60,14 @@ h1{
 }
 p{
     font-size: 25px;
+}
+
+@keyframes fadein{
+    from{
+        opacity: 0;
+
+    }
+    to{
+        opacity: 1;
+    }
 }
