@@ -45,6 +45,12 @@ h1{
     top: 3%;
     left: 10%;
 }
+.from{
+    width: 85%;
+    position: absolute;
+    top: 85%;
+    left: 10%;
+}
 .TextBox{
     float: left;
     width: 50%;
